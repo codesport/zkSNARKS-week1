@@ -21,7 +21,11 @@ snarkjs r1cs info HelloWorld/HelloWorld.r1cs
 # Start a new zkey and make a contribution
 
 snarkjs groth16 setup HelloWorld/HelloWorld.r1cs powersOfTau28_hez_final_10.ptau HelloWorld/circuit_0000.zkey
+
+#Contribute to the phase 2 ceremony
 snarkjs zkey contribute HelloWorld/circuit_0000.zkey HelloWorld/circuit_final.zkey --name="1st Contributor Name" -v -e="random text"
+
+# Verify
 snarkjs zkey export verificationkey HelloWorld/circuit_final.zkey HelloWorld/verification_key.json
 
 # generate solidity contract

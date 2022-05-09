@@ -1,3 +1,8 @@
+/**
+ * Use Groth16 to est if the proof is a valid proof or not
+ * @link https://gist.github.com/socathie/b9cadb33a0a9efe4131663f2bcf69637
+ */
+
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const fs = require("fs");
@@ -23,7 +28,8 @@ function unstringifyBigInts(o) {
     }
 }
 
-describe("SystemOfEquations", function () {
+//testing if the proof is a valid proof or not
+describe("SystemOfEquations: Testing if the proof is a valid proof or not", function () {
     let Verifier;
     let verifier;
 
